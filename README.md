@@ -1,3 +1,10 @@
+# Features
+
+Play Tic-Tac-Toe against another player.
+Responsive design for various screen sizes.
+Modal popup for win and draw messages.
+Reset button to start a new game.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
