@@ -1,0 +1,170 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling to prevent scrolling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f1b21;
+  overflow: hidden;
+  color: white;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title styling */
+.title {
+  margin-top: 2px;
+  margin-bottom: 0px;
+  color: white;
+  font-size: 2.5rem; /* Use rem for better responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title span {
+  color: aquamarine;
+  padding: 15px;
+}
+
+/* Reset button styling */
+.reset {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #1f3540;
+  font-size: 1.2rem; /* Convert to rem */
+  color: aquamarine;
+  margin-top: 5px;
+}
+
+/* Boxes (individual cells) styling */
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background: #1f3540;
+  border: 2px solid #0f1b21;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 1px; /* Added margin for better spacing */
+  position: relative;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire box */
+  background: transparent; /* Ensures the image background is transparent */
+}
+
+/* Board styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: calc(80px * 3 + 20px); /* Adjust width to fit the grid */
+  max-width: 100%; /* Ensure it does not exceed the container width */
+  margin-top: 10px; /* Space from title */
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1f3540;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.modal h2 {
+  color: aquamarine;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal-reset {
+  width: 150px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #0f1b21;
+  color: aquamarine;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .title {
+    font-size: 3rem; /* Increase title font size for larger screens */
+  }
+
+  .reset {
+    width: 180px;
+    height: 45px;
+    font-size: 1.5rem; /* Increase reset button font size */
+  }
+
+  .boxes {
+    height: 100px; /* Increase box size */
+    width: 100px;
+  }
+
+  .board {
+    width: calc(100px * 3 + 20px); /* Adjust width to fit the grid */
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.5rem; /* Further increase title font size */
+  }
+
+  .reset {
+    width: 200px;
+    height: 50px;
+    font-size: 1.75rem; /* Further increase reset button font size */
+  }
+
+  .boxes {
+    height: 120px; /* Further increase box size */
+    width: 120px;
+  }
+
+  .board {
+    width: calc(120px * 3 + 20px); /* Adjust width to fit the grid */
+  }
+}
